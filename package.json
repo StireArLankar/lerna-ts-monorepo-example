@@ -21,7 +21,6 @@
     "lint": "lerna run lint -- --fix",
     "build": "lerna run build",
     "build:app": "lerna run build:app",
-    "prepublish": "lerna run prepublish",
-    "start:app": "yarn run build && yarn --cwd example && yarn --cwd example start"
+    "prepublish": "lerna run prepublish"
   }
 }

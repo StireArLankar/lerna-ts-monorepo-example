@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { multiply } from '@test-org/utils';
 import { Bold } from '@test-org/react';
+import { Test } from '~/components/Test';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,10 +14,11 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button onClick={() => setCount(count => count + 1)}>
+          <button onClick={() => setCount(count => count + 3)}>
             count is: {count}
           </button>
         </p>
+        <Test />
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
