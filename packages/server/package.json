@@ -1,0 +1,33 @@
+{
+  "name": "@test-org/server",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "build:app": "webpack --config webpack.config.server.ts"
+  },
+  "main": "dist/index.js",
+  "module": "dist/react.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "dependencies": {
+    "@test-org/utils": "^0.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/webpack": "^5.28.0",
+    "babel-loader": "^8.2.2",
+    "dotenv": "^8.2.0",
+    "ts-loader": "^8.1.0",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.1.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

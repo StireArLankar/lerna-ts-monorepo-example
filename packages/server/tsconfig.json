@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist",
+    "noEmit": false,
+    "sourceMap": true,
+    "module": "CommonJS",
+    "strict": true,
+    "target": "es2018",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src", "types", "../../types", "webpack.config.server.ts"]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@test-org/react",
+  "version": "0.0.2",
+  "description": "Official React library for @test-org",
+  "author": "Jared Palmer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mono/mono.git",
+    "directory": "packages/react"
+  },
+  "scripts": {
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepublish": "npm run build"
+  },
+  "main": "dist/index.js",
+  "module": "dist/react.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "dependencies": {
+    "@test-org/utils": "^0.0.1",
+    "tslib": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

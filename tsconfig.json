@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.build.json",
+  "include": ["packages", "types", "scripts", "example"],
+  "compilerOptions": {
+    "allowJs": false,
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "paths": {
+      "@test-org/utils": ["packages/utils/src"],
+      "@test-org/react": ["packages/react/src"],
+      "@test-org/client": ["packages/client/src"],
+      "@test-org/server": ["packages/server/src"],
+      "$test/*": ["test/*"]
+    }
+  }
+}
