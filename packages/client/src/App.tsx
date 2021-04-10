@@ -4,6 +4,8 @@ import './App.css';
 import { multiply } from '@test-org/utils';
 import { Bold } from '@test-org/react';
 import { Test } from '~/components/Test';
+import { test } from 'common/random';
+import { common } from 'common';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
+        <p>{common(test('TEST'))}</p>
         <p>
           <button onClick={() => setCount(count => count + 3)}>
             count is: {count}

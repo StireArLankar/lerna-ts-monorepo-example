@@ -1,9 +1,12 @@
 import { createServer } from 'http';
 import { multiply } from '@test-org/utils';
 import express from 'express';
+import { test } from 'common/random';
+import { common } from 'common';
 
 console.log({ local: process.env.LOCAL });
 console.log(multiply(2, 7));
+console.log(common(test('asd')));
 
 export const initApp = async () => {
   const PORT = parseInt('9001', 10);

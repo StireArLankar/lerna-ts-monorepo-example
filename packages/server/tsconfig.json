@@ -8,7 +8,8 @@
     "target": "es2018",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "declaration": false
   },
   "include": ["src", "types", "../../types", "webpack.config.server.ts"]
 }

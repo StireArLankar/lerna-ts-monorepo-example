@@ -2,7 +2,7 @@
   "name": "@test-org/server",
   "version": "0.0.1",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "start": "ts-node-dev -r tsconfig-paths/register --project ./tsconfig.json --respawn --transpile-only ./src/index.ts",
     "build:app": "webpack --config webpack.config.server.ts"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "ts-loader": "^8.1.0",
     "ts-node": "^9.0.0",
     "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },

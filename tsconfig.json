@@ -10,7 +10,8 @@
       "@test-org/react": ["packages/react/src"],
       "@test-org/client": ["packages/client/src"],
       "@test-org/server": ["packages/server/src"],
-      "$test/*": ["test/*"]
+      "$test/*": ["test/*"],
+      "common": ["common"]
     }
   }
 }

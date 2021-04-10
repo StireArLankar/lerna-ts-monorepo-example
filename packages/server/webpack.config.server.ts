@@ -22,13 +22,23 @@ const config: webpack.Configuration = {
   },
   resolve: {
     extensions: ['.ts', '.js', '.tsx'],
+    alias: {
+      common: path.resolve(__dirname, '..', '..', 'common'),
+    },
   },
   module: {
     rules: [
       { test: /\.tsx$/, loader: 'babel-loader!ts-loader' },
       {
         test: /\.ts$/,
-        use: ['ts-loader'],
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: false,
+            },
+          },
+        ],
       },
     ],
   },

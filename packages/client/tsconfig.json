@@ -17,7 +17,9 @@
     "jsx": "react",
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "common/*": ["../../../common/*"],
+      "common": ["../../../common"]
     }
   },
   "extends": "../../tsconfig.build.json",
