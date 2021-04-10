@@ -10,7 +10,7 @@ export function Slug(props: SlugProps) {
 }
 
 export function Bold({ message }: { message: string }) {
-  return <b>/{message}</b>;
+  return <b>////{message}</b>;
 }
 
 export function Zop({ message }: { message: string }) {

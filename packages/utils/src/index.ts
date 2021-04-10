@@ -50,5 +50,5 @@ export function toPhoneE164(phone: string): string {
  * Add two numbers together
  */
 export function multiply(a: number, b: number): number {
-  return a * b * 2;
+  return a * b * 10;
 }

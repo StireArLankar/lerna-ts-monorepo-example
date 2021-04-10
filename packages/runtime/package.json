@@ -1,0 +1,16 @@
+{
+  "name": "@test-org/runtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:runtime": "esrun src/foo.ts --option=bar --verbose -S"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@digitak/esrun": "^1.0.6",
+    "@types/minimist": "^1.2.1",
+    "minimist": "^1.2.5"
+  }
+}

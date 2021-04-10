@@ -9,7 +9,7 @@
     "directory": "packages/react"
   },
   "scripts": {
-    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean --format esm",
     "build": "tsdx build --tsconfig tsconfig.build.json",
     "test": "tsdx test",
     "lint": "tsdx lint",
@@ -32,5 +32,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "license": "MIT"
 }

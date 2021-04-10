@@ -2,6 +2,7 @@
   "name": "mono",
   "private": true,
   "devDependencies": {
+    "@types/node": "^14.14.35",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "lerna": "^3.15.0",
@@ -14,8 +15,8 @@
     "packages/*"
   ],
   "scripts": {
-    "lerna": "lerna",
     "start": "lerna run start --stream --parallel",
+    "runtime": "lerna run start:runtime --stream",
     "test": "lerna run test --",
     "lint": "lerna run lint -- --fix",
     "build": "lerna run build",
