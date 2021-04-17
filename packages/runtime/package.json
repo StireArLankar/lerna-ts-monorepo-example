@@ -4,13 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:runtime": "esrun src/foo.ts --option=bar --verbose -S"
+    "start:runtime": "esrun src/foo.ts --option=bar --verbose -S",
+    "start:validate": "esrun src/validate.ts",
+    "start:compile": "node src/compile.js",
+    "start:compileTS": "esrun src/compile.ts",
+    "start:compileTS1": "esbuild src/compile.ts",
+    "schema": "ts-json-schema-generator -f ./tsconfig.json --path ./src/example.ts --type MyObject -o ./src/example.json",
+    "postschema": "prettier --write ./src/example.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@digitak/esrun": "^1.0.6",
     "@types/minimist": "^1.2.1",
-    "minimist": "^1.2.5"
+    "ajv": "^8.1.0",
+    "ajv-formats": "^2.0.2",
+    "json-schema-to-typescript": "^10.1.4",
+    "minimist": "^1.2.5",
+    "prettier": "^2.2.1",
+    "ts-json-schema-generator": "^0.90.0"
   }
 }

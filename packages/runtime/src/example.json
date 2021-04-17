@@ -1,0 +1,168 @@
+{
+  "$ref": "#/definitions/MyObject",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "MyExportString": {
+      "title": "My export string",
+      "type": "string"
+    },
+    "MyNonEmptyArray<number>": {
+      "items": {
+        "type": "number"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "MyObject": {
+      "additionalProperties": false,
+      "description": "Some description here",
+      "properties": {
+        "datetime": {
+          "format": "date-time",
+          "title": "datetime",
+          "type": "string"
+        },
+        "exportString": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/MyExportString"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": {
+            "length": 10
+          },
+          "description": "Export field description"
+        },
+        "nullableValue": {
+          "title": "Nullable value",
+          "type": ["number", "string", "null"]
+        },
+        "number": {
+          "type": ["number", "null"]
+        },
+        "numberArray": {
+          "$ref": "#/definitions/MyNonEmptyArray%3Cnumber%3E",
+          "title": "Non empty array"
+        },
+        "numberValue": {
+          "description": "This field is of integer type. Integer!\n\nThe type of this field is integer.\n\nThis is of type\n- integer\n- number",
+          "exclusiveMaximum": 10,
+          "multipleOf": 3,
+          "title": "Number field title",
+          "type": "integer"
+        },
+        "optionalValue": {
+          "title": "Optional value",
+          "type": ["number", "string"]
+        },
+        "overriddenRefType": {
+          "type": "number"
+        },
+        "privateString": {
+          "default": "private",
+          "description": "Export field description",
+          "title": "My private string",
+          "type": "string"
+        },
+        "requiredValue": {
+          "title": "Required value",
+          "type": ["number", "string"]
+        },
+        "stringValue": {
+          "minLength": 10,
+          "pattern": "[a-z]{11}",
+          "title": "String field title",
+          "type": "string"
+        },
+        "test": {
+          "additionalProperties": false,
+          "properties": {
+            "test1": {
+              "items": [
+                {
+                  "type": "number"
+                },
+                {
+                  "const": "test1",
+                  "type": "string"
+                }
+              ],
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "test3": {
+              "items": [
+                {
+                  "type": "number"
+                },
+                {
+                  "const": "test3",
+                  "type": "string"
+                }
+              ],
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            }
+          },
+          "required": ["test1", "test3"],
+          "type": "object"
+        },
+        "test2": {
+          "additionalProperties": false,
+          "properties": {
+            "key1": {
+              "items": {
+                "const": "key1",
+                "type": "string"
+              },
+              "maxItems": 1,
+              "minItems": 1,
+              "type": "array"
+            },
+            "key2": {
+              "items": {
+                "const": "key2",
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "key3": {
+              "items": {
+                "const": "key3",
+                "type": "string"
+              },
+              "maxItems": 1,
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": ["key1", "key2", "key3"],
+          "type": "object"
+        }
+      },
+      "required": [
+        "stringValue",
+        "datetime",
+        "numberValue",
+        "requiredValue",
+        "nullableValue",
+        "exportString",
+        "privateString",
+        "numberArray",
+        "number",
+        "overriddenRefType",
+        "test",
+        "test2"
+      ],
+      "title": "Some title here",
+      "type": "object"
+    }
+  }
+}
