@@ -3,14 +3,17 @@
   "version": "0.0.1",
   "scripts": {
     "start": "ts-node-dev -r tsconfig-paths/register --project ./tsconfig.json --respawn --transpile-only ./src/index.ts",
-    "build:app": "webpack --config webpack.config.server.ts",
-    "esbuild": "esbuild src/index.ts --bundle --platform=node --outfile=../../build/server_0.js"
+    "build:app": "yarn build:esbuild",
+    "build:esbuild": "ts-node-dev -r tsconfig-paths/register --project ./tsconfig.json --transpile-only ./esbuild.ts",
+    "build:webpack": "webpack --config webpack.config.server.ts",
+    "esbuild:old": "esbuild src/index.ts --bundle --platform=node --outfile=../../build/server_0.js"
   },
   "dependencies": {
     "@test-org/utils": "^0.0.1",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@anatine/esbuild-decorators": "^0.2.11",
     "@types/express": "^4.17.8",
     "@types/webpack": "^5.28.0",
     "babel-loader": "^8.2.2",

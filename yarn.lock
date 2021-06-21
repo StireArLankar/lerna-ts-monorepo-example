@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@anatine/esbuild-decorators@^0.2.11":
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/@anatine/esbuild-decorators/-/esbuild-decorators-0.2.11.tgz#7973c20616df31879e6e03c3c5bcb43b1a215e6a"
+  integrity sha512-wGwVwfF1o7nSI2tlPbUH/fJOehvCpD0Gmzxsqtu9L/A44hXqtP5GyAwXxhjfUNRFEL4iGusRLWR0FbPxD11MXw==
+
 "@apidevtools/json-schema-ref-parser@9.0.7":
   version "9.0.7"
   resolved "https://registry.yarnpkg.com/@apidevtools/json-schema-ref-parser/-/json-schema-ref-parser-9.0.7.tgz#64aa7f5b34e43d74ea9e408b90ddfba02050dde3"
