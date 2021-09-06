@@ -9,7 +9,7 @@
     "start:compile": "node src/compile.js",
     "start:compileTS": "esrun src/compile.ts",
     "start:compileTS1": "esbuild src/compile.ts",
-    "schema": "ts-json-schema-generator -f ./tsconfig.json --path ./src/example.ts --type MyObject -o ./src/example.json",
+    "schema": "ts-json-schema-generator -f ./tsconfig.schema.json --path='./src/example.ts' --type MyObject -o ./src/example.json --no-type-check",
     "postschema": "prettier --write ./src/example.json"
   },
   "author": "",
@@ -22,6 +22,6 @@
     "json-schema-to-typescript": "^10.1.4",
     "minimist": "^1.2.5",
     "prettier": "^2.2.1",
-    "ts-json-schema-generator": "^0.90.0"
+    "ts-json-schema-generator": "^0.95.0"
   }
 }

@@ -8,6 +8,7 @@ const ajv = new Ajv({ allowUnionTypes: true });
 addFormats(ajv);
 
 const data: MyObject = {
+  testGlobal: { string: '' },
   stringValue: 'abcdabcdabc',
   exportString: '',
   datetime: '1963-06-19T08:30:06.283185Z',

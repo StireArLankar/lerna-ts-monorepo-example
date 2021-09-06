@@ -47,4 +47,7 @@ export interface SomeTitleHere {
     key2: ["key2", "key2"];
     key3: ["key3"];
   };
+  testGlobal: {
+    string: string;
+  };
 }

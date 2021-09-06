@@ -3,6 +3,7 @@
  * @description Some description here
  */
 export type MyObject = {
+  testGlobal: ArrayElement<Array<{ string: string }>>;
   /**
    * @title String field title
    * @minLength 10
