@@ -1,5 +1,7 @@
-import Bar from './bar'
 import minimist from 'minimist'
+
+import Bar from './bar'
+
 import { test } from '~/test/test'
 
 console.log(process.argv)

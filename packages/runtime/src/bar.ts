@@ -1,5 +1,5 @@
-console.log({bar: "bar"})
+console.log({ bar: 'bar' })
 
 export default () => {
-    console.log({bar: "bar228"})
+  console.log({ bar: 'bar228' })
 }

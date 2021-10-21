@@ -1,15 +1,16 @@
-const path = require('path');
-const dotenv = require('dotenv');
+const path = require('path')
 
-dotenv.config();
+const dotenv = require('dotenv')
 
-const { NODE_ENV = 'production' } = process.env;
-console.log('NODE_ENV', NODE_ENV);
-console.log(process.env.LOCAL, process.env.REACT_APP_VERSION, process.env.PORT);
+dotenv.config()
 
-const pathBuild = path.resolve(__dirname, '..', '..', 'build');
+const { NODE_ENV = 'production' } = process.env
+console.log('NODE_ENV', NODE_ENV)
+console.log(process.env.LOCAL, process.env.REACT_APP_VERSION, process.env.PORT)
 
-console.log(pathBuild, __dirname);
+const pathBuild = path.resolve(__dirname, '..', '..', 'build')
+
+console.log(pathBuild, __dirname)
 
 /** @type {import('webpack').Configuration} */
 const config = {
@@ -42,6 +43,6 @@ const config = {
       },
     ],
   },
-};
+}
 
-export default config;
+export default config

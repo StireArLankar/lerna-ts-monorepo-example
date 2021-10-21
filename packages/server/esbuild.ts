@@ -1,5 +1,5 @@
-import { esbuildDecorators } from '@anatine/esbuild-decorators';
-import { build } from 'esbuild';
+import { esbuildDecorators } from '@anatine/esbuild-decorators'
+import { build } from 'esbuild'
 
 build({
   entryPoints: ['./src/index.ts'],
@@ -9,8 +9,8 @@ build({
   plugins: [esbuildDecorators()],
   platform: 'node',
 })
-  .then(res => {
-    console.log(res);
-    process.exit(0);
+  .then((res) => {
+    console.log(res)
+    process.exit(0)
   })
-  .catch(() => process.exit(1));
+  .catch(() => process.exit(1))

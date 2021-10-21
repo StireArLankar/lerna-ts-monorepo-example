@@ -1,11 +1,12 @@
-import Ajv from 'ajv';
-import schema from './example.json';
-import { MyObject } from './example';
-import addFormats from 'ajv-formats';
+import Ajv from 'ajv'
+import addFormats from 'ajv-formats'
+
+import { MyObject } from './example'
+import schema from './example.json'
 
 // options can be passed, e.g. {allErrors: true}
-const ajv = new Ajv({ allowUnionTypes: true });
-addFormats(ajv);
+const ajv = new Ajv({ allowUnionTypes: true })
+addFormats(ajv)
 
 const data: MyObject = {
   testGlobal: { string: '' },
@@ -17,7 +18,7 @@ const data: MyObject = {
   numberArray: [1, 1],
   numberValue: 9,
   optionalValue: '',
-  overriddenRefType: (4 as unknown) as string,
+  overriddenRefType: 4 as unknown as string,
   privateString: '',
   requiredValue: 4,
   test: {
@@ -29,15 +30,15 @@ const data: MyObject = {
     key2: ['key2', 'key2'],
     key1: ['key1'],
   },
-};
+}
 
-console.log(data);
+console.log(data)
 
-const validate = ajv.compile(schema);
-const valid = validate(data);
-console.log('-----');
-console.log('full', valid);
-console.log(validate.errors);
+const validate = ajv.compile(schema)
+const valid = validate(data)
+console.log('-----')
+console.log('full', valid)
+console.log(validate.errors)
 
 // for (let key in data) {
 //   const obj: any = { ...data };

@@ -1,16 +1,17 @@
-import path from 'path';
-import * as webpack from 'webpack';
-import dotenv from 'dotenv';
+import path from 'path'
 
-dotenv.config();
+import dotenv from 'dotenv'
+import * as webpack from 'webpack'
 
-const { NODE_ENV = 'production' } = process.env;
-console.log('NODE_ENV', NODE_ENV);
-console.log(process.env.LOCAL, process.env.REACT_APP_VERSION, process.env.PORT);
+dotenv.config()
 
-const pathBuild = path.resolve(__dirname, '..', '..', 'build');
+const { NODE_ENV = 'production' } = process.env
+console.log('NODE_ENV', NODE_ENV)
+console.log(process.env.LOCAL, process.env.REACT_APP_VERSION, process.env.PORT)
 
-console.log(pathBuild, __dirname);
+const pathBuild = path.resolve(__dirname, '..', '..', 'build')
+
+console.log(pathBuild, __dirname)
 
 const config: webpack.Configuration = {
   entry: { server: './src/index.ts' },
@@ -42,6 +43,6 @@ const config: webpack.Configuration = {
       },
     ],
   },
-};
+}
 
-export default config;
+export default config

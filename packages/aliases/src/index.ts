@@ -1,3 +1,8 @@
+import { t } from '@/test'
+
+export * from '@/folder/hello'
+
+export const asdb1 = () => t({ hello: 'zxc' })
 /**
  * Return a slugified copy of a string.
  *

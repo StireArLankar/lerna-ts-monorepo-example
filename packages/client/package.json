@@ -10,6 +10,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "@test-org/utils": "^0.0.1",
+    "@test-org/aliases": "^0.0.1",
     "@test-org/react": "^0.0.2"
   },
   "devDependencies": {

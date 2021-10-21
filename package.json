@@ -5,15 +5,39 @@
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@typescript-eslint/typescript-estree": "^5.1.0",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^6.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^4.12.4",
+    "husky": "^7.0.4",
     "lerna": "^3.15.0",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "tsdx": "^0.14.0",
-    "typescript": "^4.1.2"
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tsdx": "^0.14.1",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.4.4"
   },
   "workspaces": [
     "packages/*"
   ],
+  "lint-staged": {
+    "{packages,common,types,test}/**/*.{css,scss,md,json}": "prettier --write",
+    "{packages,common,types,test}/**/*.{js,jsx,ts,tsx}": "eslint --fix"
+  },
   "scripts": {
     "start": "lerna run start --stream --parallel",
     "runtime": "lerna run start:runtime --stream",
@@ -21,6 +45,25 @@
     "lint": "lerna run lint -- --fix",
     "build": "lerna run build",
     "build:app": "lerna run build:app",
-    "prepublish": "lerna run prepublish"
+    "prepublish": "lerna run prepublish",
+    "prepare": "husky install"
+  },
+  "resolutions": {
+    "**/@typescript-eslint/eslint-plugin": "^5.1.0",
+    "**/@typescript-eslint/parser": "^5.1.0",
+    "**/@typescript-eslint/typescript-estree": "^5.1.0",
+    "**/eslint": "^7.32.0",
+    "**/eslint-config-prettier": "^8.3.0",
+    "**/eslint-config-react-app": "^6.0.0",
+    "**/eslint-plugin-flowtype": "^6.1.1",
+    "**/eslint-plugin-import": "^2.25.2",
+    "**/eslint-plugin-jest": "^25.2.2",
+    "**/eslint-plugin-jsx-a11y": "^6.4.1",
+    "**/eslint-plugin-prettier": "^4.0.0",
+    "**/eslint-plugin-react": "^7.26.1",
+    "**/eslint-plugin-react-hooks": "^4.2.0",
+    "**/eslint-plugin-testing-library": "^4.12.4",
+    "**/prettier": "^2.4.1",
+    "**/typescript": "^4.4.4"
   }
 }

@@ -1,1 +1,1 @@
-export const common = (a: string) => a;
+export const common = (a: string) => a

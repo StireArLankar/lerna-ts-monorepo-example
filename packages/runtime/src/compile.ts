@@ -1,29 +1,31 @@
-import { compile } from 'json-schema-to-typescript';
-import json from './example.json';
-import fs from 'fs';
+import fs from 'fs'
 
-global.__dirname = process.cwd();
-global.__filename = __dirname;
+import { compile } from 'json-schema-to-typescript'
 
-console.log({ __dirname, __filename });
+import json from './example.json'
 
-const initial = JSON.parse(JSON.stringify(json));
+global.__dirname = process.cwd()
+global.__filename = __dirname
 
-const MyObject = json.definitions.MyObject;
+console.log({ __dirname, __filename })
 
-const definitions = json.definitions;
+const initial = JSON.parse(JSON.stringify(json))
+
+const MyObject = json.definitions.MyObject
+
+const definitions = json.definitions
 //@ts-ignore
-delete definitions.MyObject;
+delete definitions.MyObject
 
 const temp = {
   ...json,
   definitions,
   ...MyObject,
-};
+}
 //@ts-ignore
-delete temp.$ref;
+delete temp.$ref
 
-delete initial.$ref;
+delete initial.$ref
 
 //@ts-ignore
 compile(temp, 'zxc', {
@@ -32,6 +34,6 @@ compile(temp, 'zxc', {
   bannerComment: '',
 })
   .then((ts) => {
-    fs.writeFileSync('./src/result.ts', ts);
+    fs.writeFileSync('./src/result.ts', ts)
   })
-  .catch((e) => console.error(e));
+  .catch((e) => console.error(e))

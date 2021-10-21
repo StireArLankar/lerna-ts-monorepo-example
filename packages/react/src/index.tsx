@@ -1,18 +1,19 @@
-import * as React from 'react';
-import { toSlug } from '@test-org/utils';
+import * as React from 'react'
+
+import { toSlug } from '@test-org/utils'
 
 export interface SlugProps {
-  message: string;
+  message: string
 }
 
 export function Slug(props: SlugProps) {
-  return <>{toSlug(props.message)}</>;
+  return <>{toSlug(props.message)}</>
 }
 
 export function Bold({ message }: { message: string }) {
-  return <b>//{message}</b>;
+  return <b>!!{message}</b>
 }
 
 export function Zop({ message }: { message: string }) {
-  return <i>{message}</i>;
+  return <i>{message}</i>
 }
