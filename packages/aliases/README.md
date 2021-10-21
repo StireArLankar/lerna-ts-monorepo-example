@@ -1,3 +1,3 @@
-# form1
+# example of path aliases in package
 
 placeholder

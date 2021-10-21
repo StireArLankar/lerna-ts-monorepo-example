@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "include": ["src", "types", "../../types"],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./src",
+    "noUnusedLocals": false,
+    "paths": {
+      "@/*": ["./*"],
+      "common": ["../../common"],
+      "common/*": ["../../common/*"]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ]
+  }
+}
